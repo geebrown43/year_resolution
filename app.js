@@ -8,7 +8,7 @@ const method = require('method-override')
 
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
-app.use(methodOverride('_method'))
+app.use(method('_method'))
 app.use(cors())
 app.use('/', index)
 
