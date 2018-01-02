@@ -16,7 +16,7 @@ router.post('/', (req, res) => {
 router.delete('/delete/:id', (req,res) => {
 let id = req.params.id
 db.deleteResolutions(id)
-.then(() => res.redirect('http://localhost:3000'))
+.then(() => res.redirect('https://localhost:3000'))
 })
 
 router.put('/update/:id', (req, res) => {

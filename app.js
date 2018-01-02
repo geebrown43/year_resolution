@@ -4,9 +4,11 @@ const port = process.env.PORT || 3000
 const bodyParser = require('body-parser')
 const index = require('./routes/year_resolution')
 const cors = require('cors')
+const method = require('method-override')
 
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
+app.use(methodOverride('_method'))
 app.use(cors())
 app.use('/', index)
 
