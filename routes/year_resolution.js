@@ -10,7 +10,7 @@ router.get('/', (req,res) => {
 router.post('/', (req, res) => {
     let body = req.body
     db.postResolutions(body)
-    .then(data => res.redirect('/'))
+    .then(data => res.json(data))
 })
 
 router.delete('/delete/:id', (req,res) => {
